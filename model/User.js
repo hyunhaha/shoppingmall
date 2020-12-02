@@ -20,14 +20,14 @@ const userSchema = mongoose.Schema({
     maxLength: 50,
   },
   role: {
-    type: Numer,
+    type: Number,
     default: 0
   },
   image: String,
   token: {
     type: String,
   }, tokenExp: {
-    type: Nuber
+    type: Number
   }
 });
 
