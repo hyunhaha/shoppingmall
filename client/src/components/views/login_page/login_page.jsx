@@ -34,9 +34,19 @@ const LoginPage = props => {
     <div>
       <form onSubmit={onSubmit}>
         <label>email</label>
-        <input type="eamil" value={email} onChange={onEmail} />
+        <input
+          type="eamil"
+          value={email}
+          onChange={onEmail}
+          autoComplete="on"
+        />
         <label>password</label>
-        <input type="password" value={password} onChange={onPassword} />
+        <input
+          type="password"
+          value={password}
+          onChange={onPassword}
+          autoComplete="on"
+        />
         <button type="submit">login</button>
       </form>
     </div>

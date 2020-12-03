@@ -34,7 +34,7 @@ const RegisterPage = props => {
     };
     dispath(registerUser(registerInfo)) //
       .then(response => {
-        if (response.payload.success) {
+        if (response.payload.registerSuccess) {
           history.push("/login");
         } else {
           alert("fail");
@@ -45,16 +45,27 @@ const RegisterPage = props => {
     <div>
       <form onSubmit={onSubmit}>
         <label>email</label>
-        <input type="eamil" value={email} onChange={onEmail} />
+        <input
+          type="eamil"
+          value={email}
+          onChange={onEmail}
+          autoComplete="on"
+        />
         <label>name</label>
-        <input type="text" value={name} onChange={onName} />
+        <input type="text" value={name} onChange={onName} autoComplete="on" />
         <label>password</label>
-        <input type="password" value={password} onChange={onPassword} />
+        <input
+          type="password"
+          value={password}
+          onChange={onPassword}
+          autoComplete="on"
+        />
         <label>password 확인</label>
         <input
           type="password"
           value={comfirmPassword}
           onChange={onConfirmPassword}
+          autoComplete="on"
         />
         <button type="submit">login</button>
       </form>

@@ -25,7 +25,7 @@ app.post('/api/users/register', (req, res) => {//회원가입을 하면 클라�
 
   user.save((err, doc) => {//mongodb 메소드
     if (err) return res.json({ success: false, err });
-    return res.status(200).json({ success: true })
+    return res.status(200).json({ registerSuccess: true })
   });
 });
 
@@ -62,7 +62,7 @@ app.get('/api/users/auth', auth, (req, res) => {
   res.status(200).json({
     _id: req.user._id,
     isAdmin: req.user.role === 0 ? false : true,
-    isAuth: ture,
+    isAuth: true,
     email: req.user.email,
     name: req.user.name,
     lastname: req.user.lastname,
@@ -75,7 +75,7 @@ app.get('/api/users/logout', auth, (req, res) => {
   User.findOneAndUpdate({ _id: req.user._id },
     { token: '' }, (err, user) => {
       if (err) return res.json({ success: false, err });
-      return res.status(200).json({ success: true });
+      return res.status(200).json({ logoutSuccess: true });
     });
 });
 
