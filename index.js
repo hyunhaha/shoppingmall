@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express()
 const bodyParser = require('body-parser');
-const config = require('./config/key');
+const config = require('./server/config/key');
 const cookieparser = require('cookie-parser');
 
-const { User } = require('./model/User');//import로 하지 않는 이유는 뭘까
-const { auth } = require('./middleware/auth');
+const { User } = require('./server/model/User');//import로 하지 않는 이유는 뭘까
+const { auth } = require('./server/middleware/auth');
 
 app.use(bodyParser.urlencoded({ extended: true }));//데이터를 분석해서 가져온다? application/x-www-form-urlencoded
 app.use(bodyParser.json());//json타입으로 된것을 분석해서 가져온다
@@ -78,5 +78,9 @@ app.get('/api/users/logout', auth, (req, res) => {
       return res.status(200).json({ success: true });
     });
 });
+
+app.get('/api/hello', (req, res) => {
+  res.send('안녕하세영 하이항 s');
+})
 const port = 5000;
 app.listen(port, () => console.log(` app listening on port ${port}!`));
