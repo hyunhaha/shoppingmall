@@ -19,7 +19,7 @@ const LandingPage = props => {
   };
   return (
     <div>
-      <div>LandingPage</div>
+      <div className="app">LandingPage</div>
       {/* <button onClick={onClick}>logout</button> */}
     </div>
   );
