@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { loginUser } from "../../../_actions/user_actions";
-
+import styles from "./login_page.module.css";
 const LoginPage = props => {
   const dispath = useDispatch();
   const history = useHistory();
@@ -31,23 +31,27 @@ const LoginPage = props => {
       });
   };
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <label>email</label>
+    <div className={styles.login}>
+      <form className={styles.form} onSubmit={onSubmit}>
+        <label className={styles.label}>email</label>
         <input
+          className={styles.input}
           type="eamil"
           value={email}
           onChange={onEmail}
           autoComplete="on"
         />
-        <label>password</label>
+        <label className={styles.label}>password</label>
         <input
+          className={styles.input}
           type="password"
           value={password}
           onChange={onPassword}
           autoComplete="on"
         />
-        <button type="submit">login</button>
+        <button className={styles.button} type="submit">
+          login
+        </button>
       </form>
     </div>
   );

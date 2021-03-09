@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { registerUser } from "../../../_actions/user_actions";
-
+import styles from "./register_page.module.css";
 const RegisterPage = props => {
   const dispath = useDispatch();
   const history = useHistory();
@@ -42,32 +42,43 @@ const RegisterPage = props => {
       });
   };
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <label>email</label>
+    <div className={styles.register}>
+      <form className={styles.form} onSubmit={onSubmit}>
+        <label className={styles.label}>email</label>
         <input
+          className={styles.input}
           type="eamil"
           value={email}
           onChange={onEmail}
           autoComplete="on"
         />
-        <label>name</label>
-        <input type="text" value={name} onChange={onName} autoComplete="on" />
-        <label>password</label>
+        <label className={styles.label}>name</label>
         <input
+          className={styles.input}
+          type="text"
+          value={name}
+          onChange={onName}
+          autoComplete="on"
+        />
+        <label className={styles.label}>password</label>
+        <input
+          className={styles.input}
           type="password"
           value={password}
           onChange={onPassword}
           autoComplete="on"
         />
-        <label>password 확인</label>
+        <label className={styles.label}>password 확인</label>
         <input
+          className={styles.input}
           type="password"
           value={comfirmPassword}
           onChange={onConfirmPassword}
           autoComplete="on"
         />
-        <button type="submit">login</button>
+        <button className={styles.button} type="submit">
+          login
+        </button>
       </form>
     </div>
   );

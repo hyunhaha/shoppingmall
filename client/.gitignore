@@ -13,6 +13,7 @@
 
 # Optional eslint cache
 .eslintcache
+
 # misc
 .DS_Store
 .env.local
