@@ -21,18 +21,23 @@ const RightSection = props => {
     return (
       <div className={styles.right}>
         <a className={styles.link} href="/login">
-          login
+          Signin
         </a>
 
         <a className={styles.link} href="/register">
-          register
+          Signup
         </a>
       </div>
     );
   } else {
     return (
-      <div className={styles.link} onClick={onClick}>
-        logout
+      <div>
+        <a href="/product/upload" className={styles.link}>
+          Upload
+        </a>
+        <a className={styles.link} onClick={onClick}>
+          Logout
+        </a>
       </div>
     );
   }

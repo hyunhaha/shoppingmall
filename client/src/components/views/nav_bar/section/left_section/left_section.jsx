@@ -5,7 +5,7 @@ const LeftSection = props => {
   return (
     <div>
       <a className={styles.link} href="/">
-        home
+        Home
       </a>
     </div>
   );

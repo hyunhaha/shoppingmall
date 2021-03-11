@@ -24,6 +24,9 @@
 .logo a:hover {
   color: #b18597;
 }
+.menuContainer {
+  font-size: 14px;
+}
 .menuContainer .left {
   float: left;
 }

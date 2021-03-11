@@ -44,7 +44,7 @@ const RegisterPage = props => {
   return (
     <div className={styles.register}>
       <form className={styles.form} onSubmit={onSubmit}>
-        <label className={styles.label}>email</label>
+        <label className={styles.label}>Email</label>
         <input
           className={styles.input}
           type="eamil"
@@ -52,7 +52,7 @@ const RegisterPage = props => {
           onChange={onEmail}
           autoComplete="on"
         />
-        <label className={styles.label}>name</label>
+        <label className={styles.label}>Name</label>
         <input
           className={styles.input}
           type="text"
@@ -60,7 +60,7 @@ const RegisterPage = props => {
           onChange={onName}
           autoComplete="on"
         />
-        <label className={styles.label}>password</label>
+        <label className={styles.label}>Password</label>
         <input
           className={styles.input}
           type="password"
@@ -68,7 +68,7 @@ const RegisterPage = props => {
           onChange={onPassword}
           autoComplete="on"
         />
-        <label className={styles.label}>password 확인</label>
+        <label className={styles.label}>Password Confirm</label>
         <input
           className={styles.input}
           type="password"
@@ -77,7 +77,7 @@ const RegisterPage = props => {
           autoComplete="on"
         />
         <button className={styles.button} type="submit">
-          login
+          Register
         </button>
       </form>
     </div>
